@@ -1,0 +1,134 @@
+Cria uma aplicação web full-stack completa para gestão do salão IzaBraids.  
+Segue rigorosamente todas as especificações abaixo.
+
+O projeto final deve ser 100% funcional, sem omissões, com código pronto a correr.
+
+---
+
+📌 REQUISITOS ESPECÍFICOS DO PROJETO
+
+- Nome do site/salão: IzaBraids. Deve aparecer no título, logótipo, navbar, rodapé e em todas as comunicações.
+- Idioma: todo o conteúdo visível (interface, mensagens, validações, e-mails, documentação Swagger, dados de seed, etc.) em português de Portugal. Formato de data DD/MM/AAAA, moeda €, vírgula como separador decimal.
+- Base de Dados: chama-se salao, utilizador salao, palavra-passe 12345. A string de ligação no ficheiro appsettings.json (backend) deve ser exatamente:
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost;Database=salao;User Id=salao;Password=12345;TrustServerCertificate=True;"
+  }
+- Frontend: React 18+ com Vite, JavaScript (sem TypeScript).
+- README: apenas um ficheiro README.md na raiz do projeto (não separar por backend/frontend). O autor do projeto é Dalton. O README deve explicar tudo o que é necessário para instalar e correr o sistema completo.
+
+---
+
+📁 ESTRUTURA DE FICHEIROS
+
+Fornece a árvore completa de diretórios e ficheiros, com o código integral de cada ficheiro, incluindo todos os imports e dependências.
+
+---
+
+🔧 BACKEND - .NET 8 Web API
+
+Models (Entidades):
+- Servico (Id, Nome, Descricao, Preco, DuracaoMinutos, Categoria, ImagemUrl, Ativo)
+- Produto (Id, Nome, Descricao, Preco, Stock, Categoria, ImagemUrl, Ativo)
+- Profissional (Id, Nome, Especialidade, FotoUrl, Biografia, Ativo)
+- Cliente (Id, Nome, Email, Telefone)
+- Marcacao (Id, ClienteId, ServicoId, ProfissionalId, DataHora, Estado, Observacoes)
+- Categoria (Id, Nome, Tipo) – Tipo: "Servico" ou "Produto"
+- Galeria (Id, Titulo, Descricao, ImagemUrl, Categoria, DataPublicacao)
+- Utilizador (Id, Nome, Email, PasswordHash, Role) – Role: "Admin" ou "Funcionario"
+
+Funcionalidades:
+- Autenticação JWT com registo/login, proteção de rotas administrativas, refresh tokens.
+- Endpoints RESTful:
+  - CRUD completo para Serviços, Produtos, Profissionais, Galeria.
+  - Marcações: POST /api/marcacoes, GET /api/marcacoes, GET /api/marcacoes/disponibilidade?data=&profissionalId=, PUT /api/marcacoes/{id}/estado.
+  - GET /api/dashboard – estatísticas.
+- Validações: conflitos de horário, Data Annotations em português, middleware global de exceções (mensagens em português).
+- Base de Dados: Entity Framework Core com SQL Server, migrations automáticas, seeders com dados de exemplo (mínimo 5 serviços, 10 produtos, 3 profissionais) – textos em português de Portugal.
+- Serviços adicionais: envio de email de confirmação (mock, em português, a mencionar IzaBraids), upload de imagens (sistema de ficheiros local ou Azure Blob).
+- Swagger documentado em português, CORS para localhost:3000 e localhost:5173, Serilog, configuração em appsettings.json e appsettings.Development.json.
+
+---
+
+🎨 FRONTEND – React 18+ com Vite (JavaScript)
+
+Interface totalmente em português de Portugal. Nome IzaBraids em todo o lado.
+
+Páginas Públicas:
+1. Home – banner, serviços destacados, testemunhos, CTA.
+2. Serviços – lista com filtros por categoria, preços (€), duração.
+3. Produtos – catálogo, filtros, pesquisa, carrinho.
+4. Marcação – passo a passo: serviço → profissional → data/hora → dados cliente → confirmação.
+5. Galeria – grid com lightbox, filtros, lazy loading.
+6. Contactos – info, mapa, formulário.
+
+Área Administrativa (protegida por login):
+7. Login
+8. Dashboard – cards, gráficos, próximas marcações.
+9. Gestão de Marcações – tabela, confirmar/cancelar.
+10. Gestão de Serviços – CRUD modal + upload imagem.
+11. Gestão de Produtos – CRUD modal + upload imagem, gestão de stock.
+12. Gestão de Profissionais – CRUD modal + upload foto.
+13. Gestão de Galeria – upload múltiplo, organizar, eliminar.
+
+Componentes Reutilizáveis:
+- Navbar (com IzaBraids), Footer, Cards, Modal, Botão (variantes, texto PT), Input (validação PT), Spinner, Toast (PT), Calendário (pt-PT), Tabela paginada, Breadcrumbs, ProtectedRoute.
+
+Tecnologias e Bibliotecas:
+- React 18 + Vite (JavaScript)
+- React Router v6, Tailwind CSS, TanStack Query, React Hook Form + Zod (mensagens PT), Axios, Context API, React Hot Toast, React DatePicker (pt-PT), React Icons, React Lightbox, Recharts, Framer Motion (opcional), React Helmet Async.
+
+Funcionalidades Adicionais:
+- Carrinho persistido em localStorage
+- Responsivo mobile-first
+- Animações suaves
+- Página 404 em português
+- Lazy loading de imagens
+- SEO com React Helmet Async (títulos/meta em PT, incluir IzaBraids)
+
+---
+
+✅ TESTES UNITÁRIOS
+
+Backend: xUnit, testes de disponibilidade, controladores com Moq, mínimo 10 testes.
+Frontend: Vitest + React Testing Library, testes de hooks e formulários, mínimo 8 testes.
+
+---
+
+📝 BOAS PRÁTICAS
+
+Código limpo, SOLID, DRY, Repository Pattern, DTOs, AutoMapper, Custom Hooks, Error Boundaries, comentários em português, tratamento de erros consistente.
+
+---
+
+📋 README.md (ÚNICO, NA RAIZ)
+
+Cria um único ficheiro README.md na raiz do projeto (que contém as pastas backend e frontend). Deve incluir:
+- Título: IzaBraids – Sistema de Gestão de Salão
+- Autor: Dalton Martins
+- Descrição do projeto
+- Tecnologias utilizadas (backend e frontend)
+- Pré-requisitos (Node.js, .NET 8 SDK, SQL Server, etc.)
+- Instruções completas de instalação e configuração (incluir como configurar a base de dados com as credenciais salao/12345)
+- Como executar o backend e o frontend
+- Estrutura de pastas
+- Endpoints principais da API
+- Variáveis de ambiente (se aplicável)
+
+---
+
+🎯 REQUISITOS NÃO FUNCIONAIS
+
+Performance (lazy loading, code splitting), acessibilidade básica (ARIA), segurança (headers, CORS), responsividade total.
+
+---
+
+🗂️ ESTRUTURA COMPLETA DE FICHEIROS
+
+Fornece a árvore completa de diretórios e ficheiros com todo o código implementado e funcional, sem ficheiros vazios. Cada ficheiro deve aparecer com o seu caminho completo (ex.: backend/Program.cs, frontend/src/App.jsx, etc.).
+
+Nota importante: em todos os ficheiros de configuração do backend, a string de ligação é:
+"ConnectionStrings": {
+  "DefaultConnection": "Server=localhost;Database=salao;User Id=salao;Password=12345;TrustServerCertificate=True;"
+}
+
+O projeto gerado deve estar pronto a executar sem ajustes manuais adicionais.

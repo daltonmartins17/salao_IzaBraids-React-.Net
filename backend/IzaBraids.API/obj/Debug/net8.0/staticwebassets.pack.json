@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Dalton\\OneDrive\\Ambiente de Trabalho\\Projetos\\Salao\\backend\\IzaBraids.API\\wwwroot\\uploads\\galeria\\0fcc2c1d-bc3d-4677-956b-65895a88d0bc.jpg",
+      "PackagePath": "staticwebassets\\uploads\\galeria\\0fcc2c1d-bc3d-4677-956b-65895a88d0bc.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Dalton\\OneDrive\\Ambiente de Trabalho\\Projetos\\Salao\\backend\\IzaBraids.API\\wwwroot\\uploads\\produtos\\566be24c-d643-485c-911f-9fa8a1fa96db.jpg",
+      "PackagePath": "staticwebassets\\uploads\\produtos\\566be24c-d643-485c-911f-9fa8a1fa96db.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Dalton\\OneDrive\\Ambiente de Trabalho\\Projetos\\Salao\\backend\\IzaBraids.API\\wwwroot\\uploads\\profissionais\\74798609-af71-489d-838d-0f2af430d59e.jpg",
+      "PackagePath": "staticwebassets\\uploads\\profissionais\\74798609-af71-489d-838d-0f2af430d59e.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Dalton\\OneDrive\\Ambiente de Trabalho\\Projetos\\Salao\\backend\\IzaBraids.API\\wwwroot\\uploads\\servicos\\24129070-5141-48a7-a04c-ee299dc284e5.jpg",
+      "PackagePath": "staticwebassets\\uploads\\servicos\\24129070-5141-48a7-a04c-ee299dc284e5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Dalton\\OneDrive\\Ambiente de Trabalho\\Projetos\\Salao\\backend\\IzaBraids.API\\wwwroot\\uploads\\servicos\\44fe6c00-dd12-422b-92fc-9c484c822bfa.jpg",
+      "PackagePath": "staticwebassets\\uploads\\servicos\\44fe6c00-dd12-422b-92fc-9c484c822bfa.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Dalton\\OneDrive\\Ambiente de Trabalho\\Projetos\\Salao\\backend\\IzaBraids.API\\wwwroot\\uploads\\servicos\\97b3e352-c776-432c-ba62-6d7b3b6f98e2.jpg",
+      "PackagePath": "staticwebassets\\uploads\\servicos\\97b3e352-c776-432c-ba62-6d7b3b6f98e2.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.IzaBraids.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.IzaBraids.API.props",
+      "PackagePath": "build\\IzaBraids.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.IzaBraids.API.props",
+      "PackagePath": "buildMultiTargeting\\IzaBraids.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.IzaBraids.API.props",
+      "PackagePath": "buildTransitive\\IzaBraids.API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
