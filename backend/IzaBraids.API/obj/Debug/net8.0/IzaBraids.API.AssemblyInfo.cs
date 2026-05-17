@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("IzaBraids.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fb27cbce0afa34bca7ac4d5e221b9bf0a08e22d2")]
 [assembly: System.Reflection.AssemblyProductAttribute("IzaBraids.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IzaBraids.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
